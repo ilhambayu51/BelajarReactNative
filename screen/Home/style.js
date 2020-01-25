@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     height: 70,
     borderRadius: 13,
     alignItems: 'center',
+    marginLeft: '12%',
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -98,8 +99,15 @@ const styles = StyleSheet.create({
 
   text2: {fontWeight: 'bold', fontSize: 26},
 
-  view1: {fontWeight: 'bold', fontSize: 26},
+  view1: {
+    fontWeight: 'bold',
+    fontSize: 26,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: '-5%',
+  },
 
   view2: {flexDirection: 'row', marginLeft: '24%', marginTop: '5%'},
+  View3: {backgroundColor: '#fff'},
 });
 export default styles;

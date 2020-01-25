@@ -1,69 +1,69 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import {Button, Text, View, TouchableOpacity, StyleSheet} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import {createAppContainer} from 'react-navigation';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
-import {createStackNavigator} from 'react-navigation-stack';
+import {View} from 'react-native';
+import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
+import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import {
+  HomeStack,
+  ProfilStack,
+  TripStack,
+  NotificationStack,
+} from './router/stackNavigator';
 
-import HomeScreen from './screen/Home';
-import SettingsScreen from './screen/Setting';
-import DetailsScreen from './screen/Detail';
-import ProfileScreen from './screen/Profil';
-const HomeStack = createStackNavigator(
+const TabNavigator = createMaterialBottomTabNavigator(
   {
-    Home: {screen: HomeScreen},
-    Details: {screen: DetailsScreen},
-  },
-  {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: '#42f44b',
+    Home: {
+      screen: HomeStack,
+      navigationOptions: {
+        tabBarLabel: 'Home',
+        tabBarIcon: ({tintColor}) => (
+          <View>
+            <Icon style={[{color: tintColor}]} size={25} name={'home'} />
+          </View>
+        ),
       },
-      headerTintColor: '#FFFFFF',
-      title: 'Home',
+    },
+    Trip: {
+      screen: TripStack,
+      navigationOptions: {
+        tabBarLabel: 'Trip',
+        tabBarIcon: ({tintColor}) => (
+          <View>
+            <Icon style={[{color: tintColor}]} size={25} name={'home'} />
+          </View>
+        ),
+      },
+    },
+    Notification: {
+      screen: NotificationStack,
+      navigationOptions: {
+        tabBarLabel: 'Notification',
+        tabBarIcon: ({tintColor}) => (
+          <View>
+            <Icon style={[{color: tintColor}]} size={25} name={'home'} />
+          </View>
+        ),
+      },
+    },
+    Profile: {
+      screen: ProfilStack,
+      navigationOptions: {
+        tabBarLabel: 'Profil',
+        tabBarIcon: ({tintColor}) => (
+          <View>
+            <Icon style={[{color: tintColor}]} size={25} name={'user-alt'} />
+          </View>
+        ),
+      },
     },
   },
-);
-const SettingsStack = createStackNavigator(
   {
-    Settings: {screen: SettingsScreen},
-    Details: {screen: DetailsScreen},
-    Profile: {screen: ProfileScreen},
-  },
-  {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: '#42f44b',
-      },
-      headerTintColor: '#FFFFFF',
-      title: 'Settings',
-    },
+    initialRouteName: 'Home',
+    activeColor: '#82D6EE',
+    inactiveColor: '#d2d2d2',
+    barStyle: {backgroundColor: '#fff'},
   },
 );
-const App = createBottomTabNavigator(
-  {
-    Home: {screen: HomeStack},
-    Settings: {screen: SettingsStack},
-  },
-  {
-    defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({focused, horizontal, tintColor}) => {
-        const {routeName} = navigation.state;
-        let IconComponent = Ionicons;
-        let iconName;
-        if (routeName === 'Home') {
-          iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-        } else if (routeName === 'Settings') {
-          iconName = `ios-checkmark-circle${focused ? '' : '-outline'}`;
-        }
-        return <IconComponent name={iconName} size={25} color={tintColor} />;
-      },
-    }),
-    tabBarOptions: {
-      activeTintColor: '#42f44b',
-      inactiveTintColor: 'gray',
-    },
-  },
-);
-export default createAppContainer(App);
+
+export default createAppContainer(TabNavigator);

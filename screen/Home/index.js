@@ -10,7 +10,7 @@ import Icon2 from 'react-native-vector-icons/Entypo';
 export default class Home extends Component {
   render() {
     return (
-      <View>
+      <View style={Styles.view3}>
         <View style={{flexDirection: 'row'}}>
           <Text style={Styles.text1}>Trip Planner</Text>
           <Icon name="search" size={24} />
