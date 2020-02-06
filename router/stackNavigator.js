@@ -3,6 +3,7 @@ import Home from '../screen/Home';
 import Profil from '../screen/Profil';
 import Trip from '../screen/Trip';
 import Notification from '../screen/Notification';
+import Restaurant from '../screen/Restaurant';
 
 export const ProfilStack = createStackNavigator({
   Profil: {
@@ -37,6 +38,12 @@ export const HomeStack = createStackNavigator(
       screen: Home,
       navigationOptions: {
         tabBarVisible: true,
+        header: null,
+      },
+    },
+    Restaurant: {
+      screen: Restaurant,
+      navigationOptions: {
         header: null,
       },
     },

@@ -63,6 +63,15 @@ const styles = StyleSheet.create({
     shadowRadius: 16,
     elevation: 20,
   },
+  Card5: {
+    width: 50,
+    height: 50,
+    borderTopRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    marginLeft: -50,
+    marginTop: 15,
+    backgroundColor: '#ffffff',
+  },
 
   Image1: {
     marginTop: 10,
@@ -71,14 +80,6 @@ const styles = StyleSheet.create({
     marginLeft: '8%',
     backgroundColor: '#fff',
     borderRadius: 20,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 12,
-    },
-    shadowOpacity: 5,
-    shadowRadius: 16,
-    elevation: 20,
   },
 
   Image2: {
@@ -88,8 +89,8 @@ const styles = StyleSheet.create({
   },
 
   Image3: {
-    width: 250,
-    height: 130,
+    width: 290,
+    height: 150,
     borderRadius: 20,
     marginTop: 15,
     marginLeft: 10,
@@ -104,10 +105,79 @@ const styles = StyleSheet.create({
     fontSize: 26,
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: '-5%',
+    marginTop: '-15%',
   },
 
-  view2: {flexDirection: 'row', marginLeft: '24%', marginTop: '5%'},
-  View3: {backgroundColor: '#fff'},
+  view2: {flexDirection: 'row', marginLeft: '24%', marginTop: '10%'},
+  View3: {backgroundColor: '#ffffff'},
+
+  icon: {
+    marginLeft: '9%',
+    marginTop: '9%',
+    marginBottom: '2%',
+    color: '#2E26D9',
+  },
+  icon2: {
+    marginLeft: '20%',
+    marginTop: '9%',
+    marginBottom: '3%',
+    color: '#2E26D9',
+  },
+  icon3: {
+    marginLeft: '1%',
+    marginTop: '9%',
+    marginBottom: '2%',
+    color: '#2E26D9',
+  },
+  icon4: {
+    marginLeft: '4.5%',
+    marginTop: '9%',
+    marginBottom: '2%',
+    color: '#2E26D9',
+  },
+  icon5: {
+    marginLeft: '18%',
+    marginTop: '4%',
+    marginBottom: '1%',
+    color: '#2E26D9',
+  },
+  icon6: {
+    marginTop: 23,
+    marginLeft: 137,
+  },
+  icon7: {
+    marginTop: 23,
+    marginLeft: 10,
+  },
+  icon8: {
+    marginTop: -20,
+    marginLeft: 50,
+  },
+  icon9: {
+    marginLeft: 8,
+    marginTop: 17,
+  },
+
+  Toucable1: {
+    backgroundColor: 'white',
+    width: 255,
+    height: 85,
+    borderRadius: 10,
+    position: 'relative',
+    marginTop: -40,
+    marginLeft: 28,
+  },
+
+  text3: {
+    fontSize: 20,
+    marginBottom: '3%',
+    marginLeft: '6%',
+    marginTop: 14,
+  },
+  text4: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: '6%',
+  },
 });
 export default styles;

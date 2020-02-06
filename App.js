@@ -3,7 +3,9 @@ import React from 'react';
 import {View} from 'react-native';
 import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon2 from 'react-native-vector-icons/Ionicons';
+import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons';
 import {
   HomeStack,
   ProfilStack,
@@ -19,7 +21,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
         tabBarLabel: 'Home',
         tabBarIcon: ({tintColor}) => (
           <View>
-            <Icon style={[{color: tintColor}]} size={25} name={'home'} />
+            <Icon2 style={[{color: tintColor}]} size={25} name={'md-home'} />
           </View>
         ),
       },
@@ -30,7 +32,11 @@ const TabNavigator = createMaterialBottomTabNavigator(
         tabBarLabel: 'Trip',
         tabBarIcon: ({tintColor}) => (
           <View>
-            <Icon style={[{color: tintColor}]} size={25} name={'home'} />
+            <Icon3
+              style={[{color: tintColor}]}
+              size={25}
+              name={'briefcase-outline'}
+            />
           </View>
         ),
       },
@@ -41,7 +47,11 @@ const TabNavigator = createMaterialBottomTabNavigator(
         tabBarLabel: 'Notification',
         tabBarIcon: ({tintColor}) => (
           <View>
-            <Icon style={[{color: tintColor}]} size={25} name={'home'} />
+            <Icon2
+              style={[{color: tintColor}]}
+              size={25}
+              name={'ios-notifications-outline'}
+            />
           </View>
         ),
       },
@@ -52,7 +62,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
         tabBarLabel: 'Profil',
         tabBarIcon: ({tintColor}) => (
           <View>
-            <Icon style={[{color: tintColor}]} size={25} name={'user-alt'} />
+            <Icon style={[{color: tintColor}]} size={25} name={'user-o'} />
           </View>
         ),
       },
@@ -60,8 +70,8 @@ const TabNavigator = createMaterialBottomTabNavigator(
   },
   {
     initialRouteName: 'Home',
-    activeColor: '#82D6EE',
-    inactiveColor: '#d2d2d2',
+    activeColor: '#2E26D9',
+    inactiveColor: '#000000',
     barStyle: {backgroundColor: '#fff'},
   },
 );
