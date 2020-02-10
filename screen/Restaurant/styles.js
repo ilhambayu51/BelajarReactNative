@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {Fonts} from '../../src/utils/Font';
 
 const Styles = StyleSheet.create({
   view: {
@@ -7,7 +8,8 @@ const Styles = StyleSheet.create({
   view1: {
     width: 350,
     height: 220,
-    marginTop: '7%',
+    marginTop: '3%',
+    marginBottom: '3%',
     backgroundColor: 'white',
     borderRadius: 10,
     shadowColor: '#000',
@@ -46,6 +48,7 @@ const Styles = StyleSheet.create({
   text1: {
     fontSize: 25,
     fontWeight: 'bold',
+    fontFamily: Fonts.Poppins,
   },
   text2: {
     fontSize: 16,
@@ -101,14 +104,6 @@ const Styles = StyleSheet.create({
     shadowOpacity: 5,
     shadowRadius: 26,
     elevation: 10,
-  },
-  header: {
-    flexDirection: 'row',
-    width: '100%',
-    height: '7%',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#fff',
   },
 });
 export default Styles;

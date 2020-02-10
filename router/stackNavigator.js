@@ -4,6 +4,10 @@ import Profil from '../screen/Profil';
 import Trip from '../screen/Trip';
 import Notification from '../screen/Notification';
 import Restaurant from '../screen/Restaurant';
+import Header from '../Component/Header';
+import HeaderBack from '../Component/Header/Back';
+import HeaderRight from '../Component/Header/Right';
+import React from 'react';
 
 export const ProfilStack = createStackNavigator({
   Profil: {
@@ -44,7 +48,9 @@ export const HomeStack = createStackNavigator(
     Restaurant: {
       screen: Restaurant,
       navigationOptions: {
-        header: null,
+        headerBackImage: () => <HeaderBack />,
+        header: () => <Header />,
+        headerRight: () => <HeaderRight />,
       },
     },
   },
